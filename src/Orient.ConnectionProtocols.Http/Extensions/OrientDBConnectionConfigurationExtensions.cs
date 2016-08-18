@@ -6,7 +6,7 @@ namespace OrientDB.ConnectionProtocols.Http.Extensions
 {
     public static class OrientDBConnectionConfigurationExtensions
     {
-        public static OrientDBConfiguration HttpProtocol(this OrientDBConnectionConfiguration configuration, string hostName, string userName, string password, string database, int port = 2480)
+        public static OrientDBConnectionProtocolConfiguration<string> HttpProtocol(this OrientDBConnectionConfiguration<string> configuration, string hostName, string userName, string password, string database, int port = 2480)
         {
             return configuration.HttpProtocol(new HttpConnectionOptions
             {
@@ -18,7 +18,7 @@ namespace OrientDB.ConnectionProtocols.Http.Extensions
             });
         }
 
-        public static OrientDBConfiguration HttpProtocol(this OrientDBConnectionConfiguration configuration, HttpConnectionOptions connectionOptions)
+        public static OrientDBConnectionProtocolConfiguration<string> HttpProtocol(this OrientDBConnectionConfiguration<string> configuration, HttpConnectionOptions connectionOptions)
         {
             if (configuration == null)
                 throw new ArgumentNullException($"{nameof(configuration)} cannot be null.");

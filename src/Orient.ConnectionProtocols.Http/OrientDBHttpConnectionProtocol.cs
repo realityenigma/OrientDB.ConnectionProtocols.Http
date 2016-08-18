@@ -3,7 +3,7 @@ using System;
 
 namespace OrientDB.ConnectionProtocols.Http
 {
-    public class OrientDBHttpConnectionProtocol : IOrientDBConnectionProtocol
+    public class OrientDBHttpConnectionProtocol : IOrientDBConnectionProtocol<string>
     {
         private readonly HttpConnectionOptions _options;
 
@@ -12,12 +12,12 @@ namespace OrientDB.ConnectionProtocols.Http
             _options = options;
         }
 
-        public byte[] ExecuteCommand(string sql)
+        public string ExecuteCommand(string sql)
         {
             throw new NotImplementedException();
         }
 
-        public byte[] ExecuteQuery(string sql)
+        public string ExecuteQuery(string sql)
         {
             throw new NotImplementedException();
         }

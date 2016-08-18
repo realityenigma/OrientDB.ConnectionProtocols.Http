@@ -6,7 +6,7 @@
       "type": "platform",
       "version": "1.0.0"
     },
-    "OrientDB.Core": "0.0.1-prerelease"
+    "OrientDB.Core": "0.0.3-prerelease"
   },
 
   "frameworks": {
